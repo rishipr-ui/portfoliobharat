@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Birthday card</title>
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.card{
+width:300px;
+height:200px;
+position:relative;
+cursor:pointer;
+}
+
+.card-front, .card-inside {
+    
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 1s;
+}
+
+/* Front Cover Styling */
+.card-front {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Inside Message Styling */
+.card-inside {
+    
+    font-size: 18px;
+    padding: 20px;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-inside {
+    transform: rotateY(0);
+}
+
+</style>
+</head>
+<body>
+<img src="birthday.jpg">
+<div class="card">
+<div class="card-front">
+<h2>🎉 Happy Birthday! 🎂</h2>
+<p>SURPRISE FOR YOU!!!</p>
+</div>
+<div class="card-inside">
+<h2>🎈 Happy Birthday! 🎁</h2>
+<p>Wishing you a fantastic day filled with love, laughter, and happiness! 💖</p>
+<p>Have an amazing year ahead! 🎊</p>
+</div>
+</div>
+</body>
+</html>
